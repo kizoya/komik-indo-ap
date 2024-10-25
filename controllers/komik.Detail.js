@@ -32,7 +32,7 @@ router.get('/:endpoint', async (req, res) => {
 
         const chapters = [];
         $('.listeps ul li').each((_, el) => {
-            const chapter_title = $(el).find('.lchx a.chapter').text().trim();
+            const chapter_title = $(el).find('.lchx a.chapter chapter').text().trim();
             const chapter_link = $(el).find('.lchx a').attr('href');
             const release_time = $(el).find('.dt a').text().trim();
             chapters.push({ chapter_title, chapter_link, release_time });
