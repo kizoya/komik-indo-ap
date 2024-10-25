@@ -18,7 +18,7 @@ router.get('/:endpoint', async (req, res) => {
         });
 
         const title = $('h1.entry-title').text().trim();
-        const description = $('.shortcsc').text().replace(/\s+/g, ' ').trim();
+        const description = $('.entry-content.entry-content-single[itemprop="description"] p').text().replace(/\s+/g, ' ').trim();
 
         const detail = {};
         $('.spe span').each((_, el) => {
