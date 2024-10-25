@@ -34,5 +34,5 @@ app.listen(port, () => {
    console.log(`Server berjalan di port ${port}`);
 });
 // Proxy image 
-app.get("/img", async (r, e, a) => { let t = r.query.url; if (!t) return a(Error("URL parameter is required")); try { let i = await axios({ url: t, responseType: "stream" }); i.data.pipe(e) } catch (p) { a(Error("Error proxying image")) } });
+app.get("/img", async (r, e, a) => { let t = r.query.url; if (!t) return a(Error("URL parameter is required")); try { let i = await axios({ url: t, responseType: "stream" }); i.data.pipe(e) } catch (p) { a(Error("Error!")) } });
 // rada ribet cuy karena pake ai:v
