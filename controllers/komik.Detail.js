@@ -29,7 +29,8 @@ router.get('/:endpoint', async (req, res) => {
 
         const image = $('.thumb img').attr('src') || '';
         const rating = $('.rtg i[itemprop="ratingValue"]').text().trim() || 'No rating';
-
+        const votes = $('.votescount').text().trim() || 'No votes';
+        
         const chapters = [];
         $('.listeps ul li').each((_, el) => {
             const chapter_title = $(el).find('.lchx a').text().trim();
@@ -79,6 +80,7 @@ router.get('/:endpoint', async (req, res) => {
             title,
             image,
             rating,
+            votes,
             detail,
             genres,
             description,
