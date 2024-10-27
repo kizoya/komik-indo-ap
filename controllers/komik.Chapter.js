@@ -32,6 +32,13 @@ router.get('/:endpoint', async (req, res) => {
             results.images.push({ id: index + 1, src: imgSrc });
          }
       });
+      const thumbnailSrc = $('div.thumb img').attr('src');
+        if (thumbnailSrc) {
+            results.thumbnail = {
+                src: thumbnailSrc,
+                title: $('div.thumb img').attr('title') || 'No Title'
+            };
+        }
 
       results.komik = {
          title: $('.infox h2').text().trim() || 'No Title',
