@@ -24,9 +24,7 @@ router.get('/:endpoint', async (req, res) => {
          prev: $('a[rel="prev"]').attr('href') || null,
          next: $('a[rel="next"]').attr('href') || null
       };
-      
-      results.chapterListLink = $('a:contains("Daftar Chapter")').attr('href') || null;
-
+      results.allch = $('a:contains("Daftar Chapter")').attr('href') || null;
       results.images = [];
       $('.chapter-image img').each((index, el) => {
          const imgSrc = $(el).attr('src');
