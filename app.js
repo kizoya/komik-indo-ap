@@ -13,6 +13,7 @@ const komikDetail = require('./controllers/komik.Detail');
 const komikChapter = require('./controllers/komik.Chapter');
 const komikSearch = require('./controllers/komik.Search');
 const komikLibrary = require('./controllers/komik.Library');
+const komikGenre = require('.controllers/komik.Genre');
 
 ////////////[    End import   ]////////////
 ////////////////////////////////////
@@ -21,6 +22,7 @@ app.use('/komik/latest', RequestLimit, KomikOngoing);
 app.use('/komik/detail', RequestLimit, komikDetail);
 app.use('/komik/chapter', RequestLimit, komikChapter);
 app.use('/komik/search', RequestLimit, komikSearch);
+app.use('komik/genre', RequestLimit, komikGenre);
 app.use('/komik/library', RequestLimit, komikLibrary)
 
 ////////////[End routes]////////////
