@@ -8,7 +8,7 @@ const { komik } = require('../helpers/baseURL');
 router.get('/:page?/:id', async (req, res) => {
    const page = req.params.page || 1;
    const id = req.params.id;
-   const url = `${komik}/genres/${id}/page${page}/`;
+   const url = `${komik}/genres/${id}/page/${page}/`;
   
    try {
       const data = await Fetcheader(url);
