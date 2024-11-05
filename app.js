@@ -22,7 +22,7 @@ app.use('/komik/latest', RequestLimit, KomikOngoing);
 app.use('/komik/detail', RequestLimit, komikDetail);
 app.use('/komik/chapter', RequestLimit, komikChapter);
 app.use('/komik/search', RequestLimit, komikSearch);
-app.use('komik/genre', RequestLimit, komikGenre);
+app.use('/komik/genre', RequestLimit, komikGenre);
 app.use('/komik/library', RequestLimit, komikLibrary)
 
 ////////////[End routes]////////////
