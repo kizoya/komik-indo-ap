@@ -13,7 +13,7 @@ const komikDetail = require('./controllers/komik.Detail');
 const komikChapter = require('./controllers/komik.Chapter');
 const komikSearch = require('./controllers/komik.Search');
 const komikLibrary = require('./controllers/komik.Library');
-const komikGenre = require('.controllers/komik.Genre');
+const komikGenre = require('./controllers/komik.Genre');
 
 ////////////[    End import   ]////////////
 ////////////////////////////////////
