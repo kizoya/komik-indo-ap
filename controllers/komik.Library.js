@@ -26,10 +26,12 @@ router.get('/:page?/', async (req, res) => {
          const link = $(el).find('a[rel="bookmark"]').attr('href') || '';
          const image = $(el).find('img[itemprop="image"]').attr('src') || '';
          const type = $(el).find('.typeflag').attr('class').split(' ').pop() || 'No type';
-         const color = $(el).find('.warnalabel').text().trim() || 'Hytam putih';
+         const color = $(el).find('.warnalabel').text().trim() || 'Hytam putih';    
+         const rating = $(el).find('.rating i').text().trim() || '0';
 
          results.push({
             title,
+            rating,
             link,
             image,
             type,
