@@ -4,8 +4,7 @@ const Fetcheader = async (url) => {
         headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Gecko/20100101 Firefox/83.0',
             'Origin': url,
-            'Referer': url,
-            'Accept-Language': 'id-ID'
+            'Referer': url
         }
     });
 
