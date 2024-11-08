@@ -23,6 +23,7 @@ router.get('/:page?/:id', async (req, res) => {
 
       $('.animepost').each((_, el) => {
          const title = $(el).find('.tt h4').text().trim() || 'No Title';
+         const rating = $(el).find('.rating i').text().trim() || '0';
          const link = $(el).find('a[rel="bookmark"]').attr('href') || '';
          const image = $(el).find('img[itemprop="image"]').attr('src') || '';
          const type = $(el).find('.typeflag').attr('class').split(' ').pop() || 'No type';
@@ -30,6 +31,7 @@ router.get('/:page?/:id', async (req, res) => {
 
          results.push({
             title,
+            rating,
             link,
             image,
             type,
