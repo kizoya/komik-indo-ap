@@ -30,7 +30,7 @@ router.get('/page/:pages?', async (req, res) => {
          $(el).find('.lsch').each((_, chapterEl) => {
             const ch_title = $(chapterEl).find('a').text().trim().replace(/Ch\./i, 'Chapter') || 'Untitled Chapter';
             const ch_link = $(chapterEl).find('a').attr('href') || '';
-            const ch_Date = $(chapterEl).find('.datech').text().trim() || 'No Date';
+            const ch_Date = $(chapterEl).find('span.datech').text().trim() || 'No Date';
         chapter.push({ ch_title, ch_link, ch_Date });
     });
 
