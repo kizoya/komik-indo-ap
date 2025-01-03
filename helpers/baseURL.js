@@ -1,4 +1,4 @@
 
-const komik = 'https://komikindo.pw';
+const komik = 'https://komikindo.cafe';
 
 module.exports = { komik };
